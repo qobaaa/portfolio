@@ -90,13 +90,32 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:10%;
+ 
+}
+
+.container{
+    height: 90%;
+   width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;;
 }
 
 .skill{
-    padding: 100px;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     border:7px solid #070beb;
     border-radius: 10px;
+    font-size: 4rem;
+    font-family: monospace;
+    color: #070beb;
+    flex-grow: 1;
 }
 
 .skill i{
@@ -153,4 +172,71 @@ ul {
     width: 90%;
     border: 2px solid rgba(255, 255, 255, 0.87);
     border-radius: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+.nav-bar{
+    position: fixed;
+    top: 0;
+    right:0;
+    width: 50%;
+    height: 100vh;
+    background: rgba(7, 11, 235, 0.432);
+    backdrop-filter: blur(30px);
+    z-index: 5;
+}
+
+.list-continer{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: start;
+    gap: 100px;
+    margin: 50px 0 0 50px;
+}
+.res{
+    display: flex;
+    font-size: 2rem;
+}
+.close{
+    position: absolute;
+    top:15px;
+    right: 20px;
+}
+.res:active{
+    color: #fff;
+
+}
+
+.menu{
+    margin-right: 50px;
+}
+
+    .text {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .nav-bar{
+        width: 100%;
+    }
+
+    .skill{
+        border-width: 5px;
+        font-size: 2rem;
+        height: 20%;
+        flex-direction: row;
+    }
+
+    .skill{
+        font-size: 3rem;
+    }
+
+
+    .text {
+        font-size: 1rem;
+    }
 }
